@@ -20,7 +20,7 @@ const DefaultButton = styled.button`
  */
 export const Button = ({ color, backgroundColor, label, ...props }) => {
   return (
-    <DefaultButton $color={color} $backgroundcolor={backgroundColor} {...props}>
+    <DefaultButton $color={color} $backgroundColor={backgroundColor} {...props}>
       {label}
     </DefaultButton>
   );
@@ -28,17 +28,13 @@ export const Button = ({ color, backgroundColor, label, ...props }) => {
 
 Button.propTypes = {
   /**
-   * Is this the principal call to action on the page?
+   * What text color to use
    */
-  primary: PropTypes.bool,
+  color: PropTypes.string,
   /**
    * What background color to use
    */
   backgroundColor: PropTypes.string,
-  /**
-   * How large should the button be?
-   */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
   /**
    * Button contents
    */
@@ -50,7 +46,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  backgroundColor: null,
   color: null,
+  backgroundColor: null,
   onClick: undefined,
 };
