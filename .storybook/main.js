@@ -6,11 +6,8 @@ const config = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
   ],
-  core: {
-    builder: '@storybook/builder-vite',
-  },
   framework: {
-    name: "@storybook/react-vite",
+    name: "@storybook/react-webpack5",
     options: {},
   },
   docs: {
