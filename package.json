@@ -14,14 +14,14 @@
     "build-storybook": "storybook build",
     "prepack": "npm run build"
   },
+  "main": "dist/esm/index.js",
+  "type": "module",
   "exports": {
     ".": {
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js"
     }
   },
-  "main": "dist/esm/index.js",
-  "type": "module",
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.21",
     "@storybook/addon-interactions": "^7.0.21",
@@ -29,16 +29,17 @@
     "@storybook/blocks": "^7.0.21",
     "@storybook/builder-vite": "^7.0.22",
     "@storybook/react": "^7.0.21",
-    "@storybook/react-webpack5": "^7.0.22",
     "@storybook/testing-library": "^0.0.14-next.2",
     "esbuild": "^0.18.4",
     "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rollup": "^3.25.1",
     "rollup-plugin-esbuild": "^5.0.0",
-    "storybook": "^7.0.21",
-    "styled-components": "^6.0.0-rc.3"
+    "storybook": "^7.0.21"
   },
   "dependencies": {
+    "@storybook/react-webpack5": "^7.0.22",
     "styled-components": "^6.0.0-rc.3"
   },
   "peerDependencies": {
